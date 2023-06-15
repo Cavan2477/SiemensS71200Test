@@ -1,0 +1,20 @@
+spring:
+  plc:
+    devices:
+        - ip: 192.168.0.1
+          port: 102
+          slot: 1
+          rack: 0
+          dataBlock:
+            - database-number: 2
+              read-repeat: true
+              read-repeat-interval: 1000
+              offset: 0
+              # entity-class-name: service.connect.entity.plc.ExampleBlock1
+              entity-class-name: com.heilansc.s71200.test.entity.plc.ExampleBlock1
+            - database-number: 2
+              read-repeat: true
+              read-repeat-interval: 1000
+              offset: 0
+              entity-class-name: com.heilansc.s71200.test.entity.plc.ExampleBlock2
+              # entity-class-name: service.connect.entity.plc.ExampleBlock2
